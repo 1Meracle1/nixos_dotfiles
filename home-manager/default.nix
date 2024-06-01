@@ -37,6 +37,7 @@
       discord
       feh
       pavucontrol
+      xkblayout-state
     ];
   };
 

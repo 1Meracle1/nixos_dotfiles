@@ -22,8 +22,8 @@
           blocks = [
             {
               block = "custom";
-              command = "setxkbmap -query | grep layout | awk '{print $2}'";
-              interval = 5;
+              command = "xkblayout-state print \"%s\"";
+              interval = 1;
               click = [{
                 button = "left";
                 cmd = "setxkbmap";
