@@ -12,21 +12,21 @@
       fzf
       pcmanfm
       telegram-desktop
-      discord
       pavucontrol
       xkblayout-state
       kitty
-      gtk3
+      gtk3 # only to try to fix terminal apps not opening on wayland
+      spotify
 
       # Desktop apps
       chromium
       telegram-desktop
       alacritty
-      obs-studio
+      # obs-studio
       rofi
       wofi
-      mpv
-      kdenlive
+      # mpv
+      # kdenlive # video editing tool
       discord
       gparted
       obsidian
@@ -70,10 +70,10 @@
   
       # GUI utils
       feh
-      imv
+      # imv
       dmenu
-      screenkey
-      mako
+      # screenkey
+      # mako
       gromit-mpx
   
       # Xorg stuff
@@ -87,7 +87,7 @@
       cliphist
   
       # WMs and stuff
-      herbstluftwm
+      # herbstluftwm
       hyprland
       seatd
       xdg-desktop-portal-hyprland
