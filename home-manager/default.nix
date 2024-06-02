@@ -11,6 +11,7 @@
     ./i3.nix
     ./hyprland.nix
     ./waybar.nix
+    ./zsh.nix
   ];
 
   # Recommended Nix settings
@@ -20,9 +21,13 @@
   };
 
   helix.enable = true;
+
   i3.enable = true;
+
   hyprland.enable = true;
   waybar.enable = true;
+
+  zsh.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

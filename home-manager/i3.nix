@@ -87,6 +87,10 @@
           in lib.mkOptionDefault {
             "${modifier}+h" = "focus left";
             "${modifier}+l" = "focus right";
+            "${modifier}+Shift+c" = "reload";
+            "${modifier}+Shift+r" = "restart";
+            "${modifier}+Shift+e" =
+              "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
           };
       };
     };
