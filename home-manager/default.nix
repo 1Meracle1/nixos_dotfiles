@@ -12,6 +12,8 @@
     ./hyprland.nix
     ./waybar.nix
     ./zsh.nix
+    ./alacritty.nix
+    ./htop.nix
   ];
 
   # Recommended Nix settings
@@ -28,6 +30,7 @@
   waybar.enable = true;
 
   zsh.enable = true;
+  alacritty.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

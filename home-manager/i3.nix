@@ -20,15 +20,15 @@
             };
           };
           blocks = [
-            {
-              block = "custom";
-              command = "xkblayout-state print \"%s\"";
-              interval = 1;
-              click = [{
-                button = "left";
-                cmd = "setxkbmap";
-              }];
-            }
+            # {
+            #   block = "custom";
+            #   command = "xkblayout-state print %s | awk '{print $1}'";
+            #   interval = 1;
+            #   click = [{
+            #     button = "left";
+            #     cmd = "setxkbmap";
+            #   }];
+            # }
             {
               block = "time";
               interval = 5;

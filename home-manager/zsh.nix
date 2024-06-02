@@ -23,10 +23,13 @@
           pkgs = "hx ${flakeDir}/nixos/packages.nix";
 
           cls = "clear";
+          ff = "neofetch";
         };
 
       history.size = 10000;
       history.path = "${config.xdg.dataHome}/zsh/history";
+
+      envExtra = "neofetch";
 
       oh-my-zsh = {
         enable = true;
