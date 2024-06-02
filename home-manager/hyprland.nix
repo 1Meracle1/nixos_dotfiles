@@ -8,7 +8,7 @@
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
-        "$mainMod" = "SUPER";
+        "$mainMod" = "Alt_L";
 
         monitor = ",preferred,auto,1";
 
@@ -29,7 +29,7 @@
         input = {
           kb_layout = "us,ru";
           kb_variant = "lang";
-          kb_options = "grp:caps_toggle";
+          kb_options = "grp:alt_space_toggle";
 
           follow_mouse = 1;
 
@@ -116,7 +116,7 @@
 
         exec-once = [
           "swww init"
-          "swww img ~/Downloads/nixos-chan.png"
+          "swww img ~/nixos_dotfiles/andre-benz-e4xOmzd8vzg-unsplash.jpg"
           "waybar"
           "wl-paste --type text --watch cliphist store"
           "wl-paste --type image --watch cliphist store"
@@ -139,6 +139,11 @@
           "$mainMod, right, movefocus, r"
           "$mainMod, up,    movefocus, u"
           "$mainMod, down,  movefocus, d"
+
+          "$mainMod, H,  movefocus, l"
+          "$mainMod, L,  movefocus, r"
+          "$mainMod, K,  movefocus, u"
+          "$mainMod, J,  movefocus, d"
 
           # Moving windows
           "$mainMod SHIFT, left,  swapwindow, l"

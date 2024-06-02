@@ -78,15 +78,16 @@
 
         terminal = "alacritty";
         defaultWorkspace = "workspace number 1";
+
         window.titlebar = false;
         colors.background = "#5e81ac";
-        # FIXME - perhaps raise a PR?
-        # keybindings = let
-        #     modifier = config.xsession.windowManager.i3.config.modifier;
-        #   in lib.mkOptionDefault {
-        #     "''${modifier}+h" = "focus left";
-        #     "''${modifier}+l" = "focus right";
-        #   };
+
+        keybindings = let
+            modifier = config.xsession.windowManager.i3.config.modifier;
+          in lib.mkOptionDefault {
+            "${modifier}+h" = "focus left";
+            "${modifier}+l" = "focus right";
+          };
       };
     };
 

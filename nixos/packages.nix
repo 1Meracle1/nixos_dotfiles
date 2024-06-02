@@ -16,6 +16,7 @@
       pavucontrol
       xkblayout-state
       kitty
+      gtk3
 
       # Desktop apps
       chromium
