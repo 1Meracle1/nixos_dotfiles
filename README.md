@@ -16,3 +16,6 @@ To apply configuration changes:
 To setup wallpaper:
 `cp wallpapers\andre-benz-e4xOmzd8vzg-unsplash.jpg ~/.background-image`
 `sudo reboot`
+
+To cleanup old generations in /boot directory if nixos rebuild fails due to lack of space:
+Go to /nix/var/nix/profiles/ and remove symlinks for generations you want to delete, then nix store gc.

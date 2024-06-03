@@ -10,7 +10,11 @@
       settings = {
         "$mainMod" = "Alt_L";
 
-        monitor = ",preferred,auto,1";
+        # monitor = ",preferred,auto,1";
+        monitor = [
+          "DP-3,5120x1440@120.00Hz,0x0,1"
+          "Unknown-1,disable"
+        ];
 
         env = [
           "XDG_CURRENT_DESKTOP,Hyprland"
@@ -115,8 +119,9 @@
         ];
 
         exec-once = [
+          "${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --mode 5120x1440"
           "swww init"
-          "swww img ~/nixos_dotfiles/andre-benz-e4xOmzd8vzg-unsplash.jpg"
+          "swww img ~/nixos_dotfiles/wallpapers/redd-f-wOj5odhDOZ0-unsplash.jpg"
           "waybar"
           "wl-paste --type text --watch cliphist store"
           "wl-paste --type image --watch cliphist store"
@@ -126,9 +131,9 @@
           "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
           "$mainMod, Return, exec, alacritty"
-          "$mainMod, Q, killactive,"
-          "$mainMod, M, exit,"
-          "$mainMod, E, exec, dolphin"
+          "$mainMod SHIFT, Q, killactive,"
+          "$mainMod SHIFT, E, exit,"
+          # "$mainMod, E, exec, dolphin"
           "$mainMod, F, togglefloating,"
           "$mainMod, D, exec, wofi --show drun"
           "$mainMod, P, pseudo, # dwindle"
@@ -151,11 +156,21 @@
           "$mainMod SHIFT, up,    swapwindow, u"
           "$mainMod SHIFT, down,  swapwindow, d"
 
+          "$mainMod SHIFT, h,  swapwindow, l"
+          "$mainMod SHIFT, l, swapwindow, r"
+          "$mainMod SHIFT, k,    swapwindow, u"
+          "$mainMod SHIFT, j,  swapwindow, d"
+
           # Window resizing                     X  Y
           "$mainMod CTRL, left,  resizeactive, -60 0"
           "$mainMod CTRL, right, resizeactive,  60 0"
           "$mainMod CTRL, up,    resizeactive,  0 -60"
           "$mainMod CTRL, down,  resizeactive,  0  60"
+
+          "$mainMod CTRL, h,  resizeactive, -60 0"
+          "$mainMod CTRL, l, resizeactive,  60 0"
+          "$mainMod CTRL, k,    resizeactive,  0 -60"
+          "$mainMod CTRL, j,  resizeactive,  0  60"
 
           # Switch workspaces with mainMod + [0-9]
           "$mainMod, 1, workspace, 1"

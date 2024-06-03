@@ -93,6 +93,11 @@
               "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
           };
       };
+
+      extraConfig = ''
+        exec `feh --bg-fill ~/nixos_dotfiles/wallpapers/redd-f-wOj5odhDOZ0-unsplash.jpg`
+        exec `${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --mode 5120x1440`
+      '';
     };
 
   };

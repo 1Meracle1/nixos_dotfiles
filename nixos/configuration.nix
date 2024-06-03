@@ -11,6 +11,7 @@
     ./bootloader.nix
     ./sounds.nix
     ./networking.nix
+    ./nvidia.nix
   ];
 
   nix = 
@@ -40,6 +41,11 @@
       };
   };
 
+  nvidia.enable = true;
+
+  # security.polkit.enable = true;
+  security.rtkit.enable = true;
+  
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
