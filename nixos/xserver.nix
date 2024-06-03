@@ -23,9 +23,9 @@
      ];
     };
 
-    # displayManager.setupCommands = ''
-    #     ${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --mode 5120x1440
-    #   '';
+    displayManager.setupCommands = ''
+        ${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --mode 5120x1440
+      '';
 
     # Enable the LXQT Desktop Environment.
     # displayManager.lightdm.enable = false;

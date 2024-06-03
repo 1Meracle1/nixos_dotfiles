@@ -15,6 +15,7 @@
     ./alacritty.nix
     ./htop.nix
     ./wofi.nix
+    ./qt.nix
   ];
 
   # Recommended Nix settings
@@ -32,6 +33,7 @@
 
   zsh.enable = true;
   alacritty.enable = true;
+  wofi.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

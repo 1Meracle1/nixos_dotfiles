@@ -41,6 +41,24 @@
   
       # Coding stuff
       gnumake
+      cmake
+      ninja
+      meson
+      # pkg-config
+      xorg.libX11
+      pkg-config-unwrapped
+      clang-tools
+      codespell
+      conan
+      cppcheck
+      doxygen
+      gtest
+      lcov
+      vcpkg
+      vcpkg-tool
+      clang
+      libffi
+      # libffi_3_3
       gcc
       nodejs
       python

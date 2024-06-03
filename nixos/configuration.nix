@@ -12,6 +12,7 @@
     ./sounds.nix
     ./networking.nix
     ./nvidia.nix
+    ./env.nix
   ];
 
   nix = 

@@ -7,12 +7,12 @@
       enable = true;
       bars = {
         top = {
-          # theme = "solarized-dark";
-          # icons = "awesome4";
+          theme = "solarized-dark";
+          icons = "awesome6";
           settings = {
             theme =  {
               # theme = "solarized-dark";
-              theme = "nord-dark";
+              # theme = "nord-dark";
               # overrides = {
               #   idle_bg = "#123456";
               #   idle_fg = "#abcdef";
@@ -66,12 +66,65 @@
       };
     };
 
+    programs.i3status = {
+      enable = false;
+      enableDefault = false;
+      general = {
+        interval 		= 1;
+        colors 			= true;
+        color_good      = "#88b090";
+        color_degraded  = "#ccdc90";
+        color_bad       = "#e89393";
+      };
+
+      modules = {
+        "tztime local" = {
+          position = 0;
+          settings = {
+            format = " %A %e.%B   %H:%M:%S";
+          };
+        };
+        "disk /" = {
+          position = 2;
+          settings = {
+            format = "/ %avail";
+          };
+        };
+        "load" = {
+          position = 3;
+          settings = {
+            format = " %1min";
+          };
+        };
+        "cpu_usage" = {
+          position = 4;
+          settings = {
+            format = " %usage";
+          };
+        };
+        "cpu_temperature 0" = {
+          position = 5;
+          settings = {
+            format = " %degrees°C";
+          };
+        };
+      };
+    };
+    
+
     xsession.windowManager.i3 = {
       enable = true;
       config = {
         bars = [
           {
             position = "top";
+            # statusCommand = "${pkgs.i3status}/bin/i3status";
+            # fc-list|grep jetbrains-mono
+            fonts = {
+              names = [ "JetBrains Mono" ];
+              style = "Regular";
+              size = 13.0;
+            };
             statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
           }
         ];
@@ -91,7 +144,17 @@
             "${modifier}+Shift+r" = "restart";
             "${modifier}+Shift+e" =
               "exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'";
-          };
+            "${modifier}+Shift+h" = "move left";
+            "${modifier}+Shift+j" = "move down";
+            "${modifier}+Shift+k" = "move up";
+            "${modifier}+Shift+l" = "move right";
+        };
+
+        fonts = {
+          # names = ["Consolas Menlo Monospace"];
+          size = 14.0;
+          # style = "Bold";
+        };
       };
 
       extraConfig = ''
