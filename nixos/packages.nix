@@ -18,6 +18,12 @@
       gtk3 # only to try to fix terminal apps not opening on wayland
       spotify
 
+      rofi-screenshot
+      ffcast
+      slop
+      xclip
+      imv # to open/view images
+
       # Desktop apps
       chromium
       telegram-desktop
@@ -105,9 +111,9 @@
       glaxnimate
   
       # Screenshotting
-      grim
+      grim # so far the best (easiest)
       grimblast
-      slurp
+      slurp # used in combination with grim
       flameshot
       swappy
   

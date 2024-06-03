@@ -14,6 +14,7 @@
     ./zsh.nix
     ./alacritty.nix
     ./htop.nix
+    ./wofi.nix
   ];
 
   # Recommended Nix settings

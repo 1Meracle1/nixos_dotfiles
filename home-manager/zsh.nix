@@ -24,6 +24,9 @@
 
           cls = "clear";
           ff = "neofetch";
+          scrr = "grim -g \"$(slurp)\" - | wl-copy"; # make region screenshot and copy to clipboard
+          scrfc = "grim - | wl-copy"; # make full-screen screenshot and copy to clipboard
+          scrf = "grim ~/screenshots/$(date +'%s_grim.png')"; # make full screen screenshot and save in the ~/screenshots folder
         };
 
       history.size = 10000;
