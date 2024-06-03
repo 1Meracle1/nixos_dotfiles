@@ -4,6 +4,7 @@
 
   config = lib.mkIf config.wofi.enable {
     programs.wofi = {
+      enable = true;
       style = ''
         window {
           font-family: "DejaVu Sans", "Font Awesome 5 Free";

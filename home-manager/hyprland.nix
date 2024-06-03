@@ -23,6 +23,7 @@
           "XCURSOR_SIZE,36"
           # "QT_QPA_PLATFORM,wayland"
           "XDG_SCREENSHOTS_DIR,~/screens"
+          "GBM_BACKEND,nvidia-drm"
           # "WLR_RENDERER,vulkan"
         ];
 
